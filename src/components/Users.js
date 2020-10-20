@@ -1,29 +1,85 @@
-import React from "react";
+import React,{Component} from 'react';
+import keanu from "./Keanu";
+import InstaService from"../services/instaService";
 import User from "./User";
+import  ErrorMassage from "./Error";
+import Loading from './Loading';
+import Keanu from './Keanu';
 
-export default function Users(){
-    return (
-        <div className="right">
-            <User src="https://icons-for-free.com/iconfiles/png/512/business+costume+male+man+office+user+icon-1320196264882354682.png"
-            alt="man" 
-            name="scot"/>
-            <div className="users__block">
-                <User src="https://icons-for-free.com/iconfiles/png/512/business+costume+male+man+office+user+icon-1320196264882354682.png"
-                alt="man" 
-                name="scot"/>
+export default class Users extends Component{
+    
+    InstaService = new InstaService();
+    state = {  
+        posts: [],
+        error: false,
+        loading:true
+        
+    }
+    
+    componentDidMount() {
+        this.updateuser();
+    }
+    updateuser(){
+        this.InstaService.getAllUser()
+        .then(this.onPostsLoaded)
+        .catch(this.onError);
+    }
 
-                <User src="https://icons-for-free.com/iconfiles/png/512/business+costume+male+man+office+user+icon-1320196264882354682.png"
-                alt="man" 
-                name="scot"/>
+    onPostsLoaded = (posts) =>{
+        this.setState({
+            posts,
+            error:false,
+            loading:false
+        });
+        
 
-                <User src="https://icons-for-free.com/iconfiles/png/512/business+costume+male+man+office+user+icon-1320196264882354682.png"
-                alt="man" 
-                name="scot"/>
+    }
+
+    onError = (err) =>{
+        this.setState({
+            error: true
+        })
+    }
+
+    renderUser(arr){
+        return arr.map(item =>{
+            const {name,altname,photo,src,alt,descr,id,likes} =item;
+            return (
+                // <User src={photo}
+                // alt={altname}       
+                // name={name}
+                // min/>
+            <div key={id} className="user">
                 
-                <User src="https://icons-for-free.com/iconfiles/png/512/business+costume+male+man+office+user+icon-1320196264882354682.png"
-                alt="man" 
-                name="scot"/>
+                
+                <div className=" min">
+                    <img src={photo}/>
+                    <p>{name}</p>
+                </div>
+                
             </div>
-        </div>
-    )
+            )
+        });
+    }
+
+    render() {
+        const {error,posts,loading } = this.state;
+
+        if(error){
+            return <ErrorMassage posts/>
+        }
+        if(loading){
+            return <Loading/>
+        }
+
+        const items = this.renderUser(posts);
+        
+        return(
+            <div className="left">
+                <Keanu/>
+                {items}
+            </div>
+        )
+    }
+
 }

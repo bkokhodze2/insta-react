@@ -3,11 +3,22 @@ import User from "./User";
 import Palette from "./Palette";
 
 const Profile = () => {
+    var state = {
+        name:"keanu",
+        surname:"reevessss",
+        src:"https://i2.wp.com/www.intelligentliving.co/wp-content/uploads/2019/09/Keanu-Reeves-1.jpg?fit=2100%2C1200&ssl=1",
+        alt:"man"    
+    }
+    
+    const{name,surname,src,alt} = state ;
     return(
         <div className="container profile">
-            <User src="https://icons-for-free.com/iconfiles/png/512/business+costume+male+man+office+user+icon-1320196264882354682.png"
-                alt="man" 
-                name="keanu reeves"/>
+            <User src={src}
+                alt={alt} 
+                name={name}
+                surname={surname}
+                />
+                
             <Palette/>
         </div>
     )
