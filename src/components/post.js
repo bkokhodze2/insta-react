@@ -1,5 +1,8 @@
 import React,{useEffect, useState} from "react";
 import Keanu from "./Keanu";
+// import Moment from "react-moment";
+
+
 
 const Post = (props) => {
     // console.log(props)
@@ -8,10 +11,11 @@ const Post = (props) => {
             src:"https://nighthelper.com/wp-content/uploads/2016/03/nature_waterfall_summer_lake_trees_90400_3840x2160.jpg",
             likes:"1116",
             descr: "call me!",
+            date: "10/23/2020, 6:08:57 PM"
         }
     ])
     var [value,setvalue] = useState("");
-    var [img,setimg] = useState("https://nighthelper.com/wp-content/uploads/2016/03/nature_waterfall_summer_lake_trees_90400_3840x2160.jpg");
+    var [img,setimg] = useState("");
 
     const damateba = () =>{
         setStatepost([
@@ -21,30 +25,39 @@ const Post = (props) => {
                 src:img,
                 descr:value,
                 likes: 0,
+                date: new Date().toLocaleString()
             }
-        ]);
+        ])
+        
+        setimg("");
+        setvalue("");
+        
+        
+        
     }
     
 return(
-    <> 
-        <div>
+    < > 
+        <div className="add_photo">
             <input 
+            placeholder="შეიყვანეთ სურათის აღწერა"
             type="text"
             onChange={e=> (setvalue(e.target.value) )}  value={value}
             ></input>
 
             <input 
+            placeholder="ჩააგდეთ სურათის ლინკი"
             type="text"
             onChange={e=> (setimg(e.target.value) )}  img={img}
             ></input>
 
-            <button onClick={damateba}>damatebaaa</button>
+            <button onClick={damateba}>დამატება</button>
             
         </div>
-        <div>
+        <div className="mypost">
             {statepost.map(item => 
                 <div key={item.id} className="post">
-                    <Keanu/>
+                    <Keanu date={item.date}/>
                     
                     <img src={item.src} alt="alt"></img>
                     <div className="icon_div">
@@ -56,6 +69,9 @@ return(
                     <div className="post__descr">
                         {item.descr}
                     </div>
+                    {/* <div>
+                        {item.date}
+                    </div> */}
                 </div>
             ).reverse()
             }

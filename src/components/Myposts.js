@@ -19,12 +19,7 @@ const Myposts = () => {
         console.log()
     }
 return(
-    <div>
-        <div>
-            {/* <button onClick="">add</button> */}
-        </div>
-        {/* getvalue={value} */}
-        
+    <div className="center">
         <Post/>
     </div>
 )}

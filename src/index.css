@@ -35,12 +35,13 @@ header {
 }
 
 .h-flex {
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
 }
-.home_inst{
+.home_inst {
   display: flex;
 }
 .links ul {
@@ -70,17 +71,6 @@ header {
   max-width: 850px;
 }
 
-.post {
-  margin-bottom: 70px;
-  width: 650px;
-  min-height: 560px;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  padding: 10px 0px;
-}
-
 .post .user {
   margin: 12px 12px;
 }
@@ -99,12 +89,11 @@ header {
 
 .post__descr {
   padding: 0 20px;
-  margin-top:10px;
+  margin-top: 10px;
 }
-.insta_font{
+.insta_font {
   height: 90px;
   margin-left: 25px;
-  
 }
 
 .user {
@@ -120,7 +109,6 @@ header {
   height: 70px;
   border-radius: 100%;
   object-fit: cover;
- 
 }
 
 .user div {
@@ -198,43 +186,75 @@ header {
   animation-timing-function: linear;
 }
 
-.icon_div{
+.icon_div {
   display: flex;
   padding: 0 20px;
-  flex:1;
+  flex: 1;
 }
-.size_icon{
+.size_icon {
   width: 30px;
   height: 30px;
   margin-top: 5px;
   margin-right: 10px;
   cursor: pointer;
 }
-.likes{
+.likes {
   padding: 0 20px;
   margin-top: 10px;
 }
-
+.center {
+  justify-content: center;
+  margin-bottom: 70px;
+  margin: 0 auto;
+  width: 650px;
+}
+.post {
+  margin-bottom: 70px;
+  width: 650px;
+  min-height: 560px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 10px 0px;
+}
+.mypost {
+  margin-top: 50px;
+}
+.date {
+  display: flex;
+  align-items: flex-end;
+  padding-right: 20px;
+  color: darkcyan;
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.add_photo{
+  
+}
 @keyframes example {
   0% {
-    transform:rotate(0deg);
+    transform: rotate(0deg);
     background-color: red;
   }
-  25%{
-    transform:rotate(90deg);
+  25% {
+    transform: rotate(90deg);
     background-color: green;
   }
-  50%{
-    transform:rotate(180deg);
+  50% {
+    transform: rotate(180deg);
     background-color: yellow;
   }
-  75%{
-    transform:rotate(270deg);
+  75% {
+    transform: rotate(270deg);
     background-color: black;
   }
   100% {
     background-color: blue;
-    transform:rotate(360deg);
-    
+    transform: rotate(360deg);
   }
 }

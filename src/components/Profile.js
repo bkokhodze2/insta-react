@@ -2,7 +2,7 @@ import React ,{useState,useEffect} from 'react';
 import User from "./User";
 import Palette from "./Palette";
 import Yuti from "./yuti";
-import PropTypes, { string } from 'prop-types';
+import PropTypes, { object, string } from 'prop-types';
 const Profile = () => {
     var state = {
         name:"keanu",
@@ -36,7 +36,7 @@ const Profile = () => {
     }
     
 return(
-    <div className="container profile">
+    <div >
         {show?<button onClick={open} >close</button>
             :<button onClick={close}>open</button>}
         
@@ -52,7 +52,7 @@ return(
     
 }
 Profile.propTypes = {
-    stateChat: Boolean,
+    stateChat: object,
     src :string,
     surname : string,
     alt :string
