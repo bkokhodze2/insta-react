@@ -5,14 +5,17 @@ import User from "./User";
 import  ErrorMassage from "./Error";
 import Loading from './Loading';
 
-export default class Posts extends Component{
 
+export default class Posts extends Component{
+    
     InstaService = new InstaService();
     state = {  
         posts: [],
         error: false,
         loading:true
     }
+    
+    
     componentDidMount() {
         this.updatePosts();
     }
@@ -28,8 +31,6 @@ export default class Posts extends Component{
             error:false,
             loading:false
         });
-        
-
     }
 
     onError = (err) =>{
@@ -37,11 +38,11 @@ export default class Posts extends Component{
             error: true
         })
     }
-
     renderItems(arr){
         return arr.map(item =>{
             const {name,altname,photo,src,alt,descr,id,likes} =item;
             return (
+                
             <div key={id} className="post">
                 <User src={photo}
                 alt={altname}       
@@ -64,10 +65,9 @@ export default class Posts extends Component{
             )
         });
     }
-
+    
     render() {
         const {error,posts,loading } = this.state;
-
         if(error){
             return <ErrorMassage posts/>
         }
@@ -76,7 +76,6 @@ export default class Posts extends Component{
         }
 
         const items = this.renderItems(posts);
-        
         return(
             <div className="left">
                 {items}

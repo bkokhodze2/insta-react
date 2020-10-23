@@ -20,6 +20,9 @@ export default class Header extends Component {
                             <li>
                                 <Link to="/profile" className="menu__links">profile</Link>
                             </li>
+                            <li>
+                                <Link to="/MYPOSTS" className="menu__links">MY POSTS</Link>
+                            </li>
                         </ul>
                     </nav>
                 </div>

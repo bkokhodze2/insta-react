@@ -1,7 +1,8 @@
-import React from 'react';
+import React ,{useState,useEffect} from 'react';
 import User from "./User";
 import Palette from "./Palette";
-
+import Yuti from "./yuti";
+import PropTypes, { string } from 'prop-types';
 const Profile = () => {
     var state = {
         name:"keanu",
@@ -9,19 +10,52 @@ const Profile = () => {
         src:"https://i2.wp.com/www.intelligentliving.co/wp-content/uploads/2019/09/Keanu-Reeves-1.jpg?fit=2100%2C1200&ssl=1",
         alt:"man"    
     }
-    
     const{name,surname,src,alt} = state ;
-    return(
-        <div className="container profile">
-            <User src={src}
-                alt={alt} 
-                name={name}
-                surname={surname}
-                />
-                
-            <Palette/>
-        </div>
-    )
-}
+    var[show,sethow] = useState(false);
+    var[hop,sethop] = useState(false);
+    var[namee,setnamee] = useState ("");
+    const [stateChat,setStateChat] = useState([
+            {id:1,name:"keanu",surname:"reeves",src:"https://icons-for-free.com/iconfiles/png/512/heart-131965017458786724.png"},
+            {id:2,name:"bakuri",surname:"kokhodze",src:"https://icons-for-free.com/iconfiles/png/512/heart-131965017458786724.png"},
+        ])
+    
+    useEffect(() => {
+        // add ()
+    },[]);
+    
 
+    const open = ()=>{
+        setnamee("mesame"); 
+        sethow(false);
+        sethop(true);
+    }
+
+    const close = ()=>{
+        sethow(true);
+        sethop(false);
+    }
+    
+return(
+    <div className="container profile">
+        {show?<button onClick={open} >close</button>
+            :<button onClick={close}>open</button>}
+        
+        <User src={src}
+            alt={alt} 
+            surname={surname}
+            />    
+        {show?<Yuti stateChat={stateChat}/>:""}
+        
+        <Palette/>
+    </div>
+    )
+    
+}
+Profile.propTypes = {
+    stateChat: Boolean,
+    src :string,
+    surname : string,
+    alt :string
+
+}
 export default Profile ;

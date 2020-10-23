@@ -40,14 +40,12 @@ export default class Palette extends Component {
             const {src,alt,id} = item;
             return(
                 <img key={id} src={src} alt={alt}></img>
-                
             )
         });
     }
     
     render(){
         const {error,photos,loading} = this.state;
-
         if(error){
             return <ErrorMasage/>
         }
