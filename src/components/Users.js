@@ -45,18 +45,13 @@ export default class Users extends Component{
         return arr.map(item =>{
             const {name,altname,photo,src,alt,descr,id,likes} =item;
             return (
-                // <User src={photo}
-                // alt={altname}       
-                // name={name}
-                // min/>
-            <div key={id} className="user">
                 
+            <div key={id} className="user">
                 
                 <div className=" min">
                     <img src={photo}/>
                     <p>{name}</p>
                 </div>
-                
             </div>
             )
         });
@@ -75,7 +70,7 @@ export default class Users extends Component{
         const items = this.renderUser(posts);
         
         return(
-            <div className="left">
+            <div className="">
                 <Keanu/>
                 {items}
             </div>

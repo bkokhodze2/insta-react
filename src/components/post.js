@@ -1,11 +1,8 @@
 import React,{useEffect, useState} from "react";
 import Keanu from "./Keanu";
-// import Moment from "react-moment";
-
-
 
 const Post = (props) => {
-    // console.log(props)
+    
     const [statepost,setStatepost] = useState([
         {   id:Date.now(),
             src:"https://nighthelper.com/wp-content/uploads/2016/03/nature_waterfall_summer_lake_trees_90400_3840x2160.jpg",
@@ -28,17 +25,14 @@ const Post = (props) => {
                 date: new Date().toLocaleString()
             }
         ])
-        
         setimg("");
         setvalue("");
-        
-        
         
     }
     
 return(
     < > 
-        <div className="add_photo">
+        <div className="">
             <input 
             placeholder="შეიყვანეთ სურათის აღწერა"
             type="text"
@@ -52,12 +46,11 @@ return(
             ></input>
 
             <button onClick={damateba}>დამატება</button>
-            
         </div>
         <div className="mypost">
             {statepost.map(item => 
                 <div key={item.id} className="post">
-                    <Keanu date={item.date}/>
+                    <Keanu flex date={item.date}/>
                     
                     <img src={item.src} alt="alt"></img>
                     <div className="icon_div">
@@ -69,9 +62,7 @@ return(
                     <div className="post__descr">
                         {item.descr}
                     </div>
-                    {/* <div>
-                        {item.date}
-                    </div> */}
+                    
                 </div>
             ).reverse()
             }
