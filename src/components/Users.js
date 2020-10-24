@@ -18,6 +18,7 @@ export default class Users extends Component{
     
     componentDidMount() {
         this.updateuser();
+
     }
     updateuser(){
         this.InstaService.getAllUser()
@@ -70,8 +71,9 @@ export default class Users extends Component{
         const items = this.renderUser(posts);
         
         return(
-            <div className="">
+            <div data-aos="fade-left" className="users">
                 <Keanu/>
+                <div className="user_line" ></div>
                 {items}
             </div>
         )

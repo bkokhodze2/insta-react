@@ -1,15 +1,15 @@
-import React,{useState} from "react"
-import PropTypes, { array, object, string } from 'prop-types';
+import React, { useState } from "react";
+import PropTypes, { array, object, string } from "prop-types";
 import Post from "./post";
 const Myposts = () => {
-    
-return(
+  return (
     <div className="center">
-        <Post/>
+      <Post />
     </div>
-)}
+  );
+};
 
-Myposts.propTypes={
-    statepost : array,
-}
-export default Myposts 
+Myposts.propTypes = {
+  statepost: array,
+};
+export default Myposts;

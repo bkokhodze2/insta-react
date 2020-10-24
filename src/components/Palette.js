@@ -1,62 +1,66 @@
-import React,{Component} from "react";
+import React, { Component } from "react";
 import InstaService from "../services/instaService";
-import ErrorMasage from "./Error" ;
-import Loading from "./Loading"
+import ErrorMasage from "./Error";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default class Palette extends Component {
-    InstaService = new InstaService();
-    state = {
-        error: false,
-        photos: []
-        // loading:true
-    }
-    
-    componentDidMount(){
-        this.updatePhotos();
-        
-    }
+  InstaService = new InstaService();
+  state = {
+    error: false,
+    photos: [],
+    // loading:true
+  };
 
-    updatePhotos (){
-        this.InstaService.getAllPhotos()
-            .then(this.onPhotosLoaded)
-            .catch(this.onError)
-    }
+  componentDidMount() {
+    // AOS.init({
+    //   // duration : 4000
+    // });
+    this.updatePhotos();
+  }
 
-    onError = () =>{
-        this.setState({
-            error: true
-        })
-    }
+  updatePhotos() {
+    this.InstaService.getAllPhotos()
+      .then(this.onPhotosLoaded)
+      .catch(this.onError);
+  }
 
-    onPhotosLoaded = (photos) =>{
-        this.setState({
-            error: false,
-            photos //photos:photos//
-            // loading :false
-        })
+  onError = () => {
+    this.setState({
+      error: true,
+    });
+  };
+
+  onPhotosLoaded = (photos) => {
+    this.setState({
+      error: false,
+      photos, //photos:photos//
+      // loading :false
+    });
+  };
+  renderItems(arr) {
+    return arr.map((item) => {
+      const { src, alt, id } = item;
+      return (
+        <img
+          data-aos="zoom-in"
+          key={id}
+          src={src}
+          alt={alt}
+        ></img>
+      );
+    });
+  }
+
+  render() {
+    const { error, photos, loading } = this.state;
+    if (error) {
+      return <ErrorMasage />;
     }
-    renderItems(arr){
-        return arr.map(item => {
-            const {src,alt,id} = item;
-            return(
-                <img key={id} src={src} alt={alt}></img>
-            )
-        });
-    }
-    
-    render(){
-        const {error,photos,loading} = this.state;
-        if(error){
-            return <ErrorMasage/>
-        }
-        // if(loading){
-        //     return <Loading/>
-        // }
-        const items = this.renderItems(photos);
-        return(
-            <div className="palette">
-                {items}
-            </div>
-        )
-    }
+    // if(loading){
+    //     return <Loading/>
+    // }
+    const items = this.renderItems(photos);
+    return <div className="palette">{items}</div>;
+  }
 }

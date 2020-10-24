@@ -54,6 +54,9 @@ header {
 .links ul li {
   margin: 0 20px;
 }
+.links ul li:hover {
+  border-bottom: 2px solid black;
+}
 
 .menu__links {
   font-size: 18px;
@@ -136,6 +139,19 @@ header {
   font-size: 14px;
   font-weight: 400;
 }
+.users {
+  height: 100%;
+  padding: 1rem;
+  box-shadow: 0px 0px 30px rgb(141, 57, 236);
+  border-radius: 10px;
+}
+.user_line {
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgb(141, 57, 236);
+  box-shadow: 0px 0px 30px rgb(141, 57, 236);
+}
 
 .users__block {
   margin-top: 20px;
@@ -163,7 +179,7 @@ header {
 }
 
 .palette img {
-  width: 300px;
+  width: 20%;
   flex-basis: 250px;
   flex-grow: 1;
   margin: 10px;
@@ -213,13 +229,13 @@ header {
   width: 650px;
   min-height: 560px;
   background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+  /* border: 1px solid rgba(133, 29, 253, 0.986); */
+  box-shadow: 0px 0px 30px rgb(117, 6, 243);
+  border-radius: 10px;
   padding: 10px 0px;
 }
 .mypost {
-  margin-top: 50px;
+  margin-top: 2rem;
 }
 .date {
   display: flex;
@@ -227,15 +243,107 @@ header {
   padding-right: 20px;
   color: darkcyan;
 }
-.flex{
+.flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
 }
-.add_photo{
-  
+
+.post_input {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 650px;
+  background: #ffffff;
+  border: 1px solid rgba(250, 26, 26);
+  box-shadow: 0px 0px 10px rgb(250, 26, 26);
+  border-radius: 4px;
+  padding: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 70px;
 }
+.post_input > input {
+  border:1px solid rgb(153, 0, 255);
+  box-shadow: 0px 0px 5px rgb(123, 26, 250);
+  width: 45%;
+  margin: 0 auto;
+  padding: .4rem 1rem;
+  margin-bottom: 1rem;
+  outline: none !important;
+  border-radius: 10px;
+  transition: .2s;
+  color:rgb(0, 0, 0);
+}
+.post_input > input:focus{
+  width: 70%;
+  transition: .2s;
+  border:1px solid rgb(250, 0, 0);
+  box-shadow: 0px 0px 5px rgb(255, 6, 6);
+}
+/* .post_input > input:a */
+.post_input > button {
+  width: 20%;
+  margin: 0 auto;
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #471ddfb6 100%
+  );
+  color: white;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgb(226, 52, 52);
+  border-radius: 10px;
+  transition: 0.2s;
+  outline: none !important;
+}
+
+.post_input > button:hover {
+  width: 23%;
+  transition: 0.2s;
+  box-shadow: 0px 0px 10px rgb(253, 21, 13);
+}
+
+.ds_none {
+  display: none;
+}
+.add_btns {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+.add_btns > button {
+  width: 40%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  outline: none !important;
+  color: white;
+  font-size: 20px;
+  border: 1px solid rgb(226, 52, 52);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #471ddfb6 100%
+  );
+  transition: 0.2s;
+}
+.add_btns > button:hover {
+  width: 43%;
+  transition: 0.2s;
+  box-shadow: 0px 0px 10px rgb(253, 21, 13);
+}
+
 @keyframes example {
   0% {
     transform: rotate(0deg);
