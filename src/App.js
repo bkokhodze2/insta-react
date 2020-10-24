@@ -11,9 +11,9 @@ function App() {
     <Router>
       <div className="App">
         <Header/>
-        <Route path='/' component={Feed} exact/>
-        <Route path='/profile' component={Profile} exact/>
-        <Route path='/MYPOSTS' component={Myposts}  exact/>
+        <Route path='/'  component={Feed}  exact/>
+        <Route path='/profile'  component={Profile} exact/>
+        <Route path='/MYPOSTS'  component={Myposts}  exact/>
       </div>
     </Router>
 

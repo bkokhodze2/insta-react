@@ -13,9 +13,9 @@ export default class Palette extends Component {
   };
 
   componentDidMount() {
-    // AOS.init({
-    //   // duration : 4000
-    // });
+    AOS.init({
+      // duration : 4000
+    });
     this.updatePhotos();
   }
 

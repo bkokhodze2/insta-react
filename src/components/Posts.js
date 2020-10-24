@@ -17,9 +17,9 @@ export default class Posts extends Component {
 
   componentDidMount() {
     this.updatePosts();
-    // AOS.init({
+    AOS.init({
         
-    //   });
+      });
   }
   updatePosts() {
     this.InstaService.getAllPosts()

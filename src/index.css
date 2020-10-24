@@ -343,6 +343,9 @@ header {
   transition: 0.2s;
   box-shadow: 0px 0px 10px rgb(253, 21, 13);
 }
+.is-active{
+  color:red;
+}
 
 @keyframes example {
   0% {
