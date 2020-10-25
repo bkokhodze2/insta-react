@@ -3,7 +3,7 @@ import Keanu from "./Keanu";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const Post = (props) => {
+const Post = () => {
   const [statepost, setStatepost] = useState([
     {
       id: Date.now(),
@@ -13,7 +13,25 @@ const Post = (props) => {
       descr: "call me!",
       date: "10/23/2020, 6:08:57 PM",
     },
+    {
+      id: Date.now() + 1,
+      src:
+        "https://cdn-7.nikon-cdn.com/Images/Learn-Explore/Photography-Techniques/2019/CA-Chris-Ogonek-Picture-Controls/Media/Chris-Ogonek-Picture-Controls-Vivid.jpg",
+      likes: "16",
+      descr: "call me!",
+      date: "10/23/2020, 12:08:57 PM",
+    },
+    {
+      id: Date.now() + 2,
+      src:
+        "https://eskipaper.com/images/high-resolution-photos-1.jpg",
+      likes: "126",
+      descr: "yooo",
+      date: "10/23/2020, 1:08:57 PM",
+    },
   ]);
+
+  // console.log(localStorage.getItem("state"))
   var [value, setvalue] = useState("");
   var [img, setimg] = useState("");
   var [show, setshow] = useState(false);
@@ -30,6 +48,7 @@ const Post = (props) => {
         date: new Date().toLocaleString(),
       },
     ]);
+
     setimg("");
     setvalue("");
   };
@@ -38,17 +57,18 @@ const Post = (props) => {
     setshow(false);
     sethop(true);
   };
-  useEffect(() => {
-    AOS.init({
-      
-    });
-  });
 
   const close = () => {
     setshow(true);
     sethop(false);
   };
 
+  useEffect(() => {
+    AOS.init({});
+  });
+  const removePost = (id) => {
+    setStatepost(statepost.filter((statepost) => statepost.id != id));
+  };
   return (
     <>
       <div className="add_btns">
@@ -61,6 +81,7 @@ const Post = (props) => {
 
       <div
         data-aos="fade-up"
+        data-aos-duration="1000"
         data-aos-anchor-placement="bottom-bottom"
         className={show ? "post_input " : "post_input ds_none"}
       >
@@ -72,20 +93,27 @@ const Post = (props) => {
         ></input>
 
         <input
-          placeholder="ჩააგდეთ სურათის ლინკი"
+          placeholder="ჩააგდეთ image address"
           type="text"
           onChange={(e) => setimg(e.target.value)}
-          img={img}
+          value={img}
         ></input>
 
         <button onClick={damateba}>დამატება</button>
       </div>
-      <div className="mypost" data-aos="flip-left"
-      data-aos-duration="1000">
+      <div className="mypost" data-aos="flip-left" data-aos-duration="1000">
         {statepost
           .map((item) => (
-            <div key={item.id} data-aos="flip-left" data-aos-duration="1000" className="post">
-              <Keanu flex date={item.date} />
+            <div
+              key={item.id}
+              data-aos="flip-left"
+              data-aos-duration="1000"
+              className="post"
+            >
+              <div className="remove_post">
+                <p onClick={removePost.bind(null, item.id)}>x</p>
+              </div>
+              <Keanu state={statepost} flex date={item.date} />
 
               <img src={item.src} alt="alt"></img>
               <div className="icon_div">

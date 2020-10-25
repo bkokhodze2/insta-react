@@ -17,7 +17,8 @@ body {
 header {
   height: 90px;
   background: #ffffff;
-  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1); */
+  box-shadow: 0px 0px 10px rgb(141, 57, 236);
 }
 
 .logo {
@@ -68,10 +69,12 @@ header {
   display: flex;
   justify-content: space-around;
   margin-top: 70px;
+  padding-right: 1rem;
 }
 
 .left {
-  max-width: 850px;
+  max-width: 650px;
+  padding: 0 1rem;
 }
 
 .post .user {
@@ -142,7 +145,7 @@ header {
 .users {
   height: 100%;
   padding: 1rem;
-  box-shadow: 0px 0px 30px rgb(141, 57, 236);
+  box-shadow: 0px 0px 20px rgb(141, 57, 236);
   border-radius: 10px;
 }
 .user_line {
@@ -150,7 +153,7 @@ header {
   margin-top: 15px;
   margin-bottom: 10px;
   border-bottom: 1px solid rgb(141, 57, 236);
-  box-shadow: 0px 0px 30px rgb(141, 57, 236);
+  box-shadow: 0px 0px 20px rgb(141, 57, 236);
 }
 
 .users__block {
@@ -160,7 +163,7 @@ header {
   min-height: 260px;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
 
@@ -222,15 +225,17 @@ header {
   justify-content: center;
   margin-bottom: 70px;
   margin: 0 auto;
-  width: 650px;
+  max-width: 650px;
+  padding: 0 1rem;
 }
 .post {
   margin-bottom: 70px;
-  width: 650px;
+  /* width: 650px; */
+  width: 100%;
   min-height: 560px;
   background: #ffffff;
   /* border: 1px solid rgba(133, 29, 253, 0.986); */
-  box-shadow: 0px 0px 30px rgb(117, 6, 243);
+  box-shadow: 0px 0px 20px rgb(117, 6, 243);
   border-radius: 10px;
   padding: 10px 0px;
 }
@@ -254,36 +259,40 @@ header {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  width: 650px;
+  width: 100%;
   background: #ffffff;
-  border: 1px solid rgba(250, 26, 26);
-  box-shadow: 0px 0px 10px rgb(250, 26, 26);
-  border-radius: 4px;
+  /* border: 1px solid rgba(250, 26, 26);
+  box-shadow: 0px 0px 10px rgb(250, 26, 26); */
+  border: 1px solid rgb(153, 0, 255);
+  box-shadow: 0px 0px 10px rgb(123, 26, 250);
+  border-radius: 10px;
   padding: 2rem;
   margin-top: 2rem;
   margin-bottom: 70px;
 }
 .post_input > input {
-  border:1px solid rgb(153, 0, 255);
+  border: 1px solid rgb(153, 0, 255);
   box-shadow: 0px 0px 5px rgb(123, 26, 250);
   width: 45%;
   margin: 0 auto;
-  padding: .4rem 1rem;
+  padding: 0.4rem 1rem;
   margin-bottom: 1rem;
   outline: none !important;
   border-radius: 10px;
-  transition: .2s;
-  color:rgb(0, 0, 0);
+  transition: 0.3s;
+  color: rgb(0, 0, 0);
 }
-.post_input > input:focus{
+.post_input > input:focus,
+.post_input > input:hover {
   width: 70%;
-  transition: .2s;
-  border:1px solid rgb(250, 0, 0);
+  transition: 0.2s;
+  border: 1px solid rgb(250, 0, 0);
   box-shadow: 0px 0px 5px rgb(255, 6, 6);
 }
-/* .post_input > input:a */
+
 .post_input > button {
   width: 20%;
+  cursor: pointer;
   margin: 0 auto;
   background: linear-gradient(
     45deg,
@@ -319,6 +328,7 @@ header {
 }
 .add_btns > button {
   width: 40%;
+  cursor: pointer;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -343,8 +353,25 @@ header {
   transition: 0.2s;
   box-shadow: 0px 0px 10px rgb(253, 21, 13);
 }
-.is-active{
-  color:red;
+.is-active {
+  color: red;
+}
+.remove_post {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+.remove_post > p {
+  cursor: pointer;
+  color: red;
+  border: 1px solid gray;
+  font-size: 20px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes example {

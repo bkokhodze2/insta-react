@@ -12,6 +12,7 @@ const Keanu = (props) => {
           <div>keanu</div>
           <div className="date"></div>
         </a>
+
         <div className="date">{props.date}</div>
       </div>
     </>

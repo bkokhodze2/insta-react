@@ -1,8 +1,6 @@
 import React, { uses } from "react";
 
 const Box = (props) => {
-  // console.log(props);
-  // const{name,surname,id} = props.stateChat[0];
   return (
     <div>
       {props.stateChat.map((item) => (

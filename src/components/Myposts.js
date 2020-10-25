@@ -9,7 +9,5 @@ const Myposts = () => {
   );
 };
 
-Myposts.propTypes = {
-  statepost: array,
-};
+
 export default Myposts;

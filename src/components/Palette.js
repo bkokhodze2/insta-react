@@ -44,6 +44,7 @@ export default class Palette extends Component {
       return (
         <img
           data-aos="zoom-in"
+          data-aos-duration="1000"
           key={id}
           src={src}
           alt={alt}

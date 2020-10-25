@@ -17,9 +17,7 @@ export default class Posts extends Component {
 
   componentDidMount() {
     this.updatePosts();
-    AOS.init({
-        
-      });
+    AOS.init({});
   }
   updatePosts() {
     this.InstaService.getAllPosts()
@@ -44,8 +42,12 @@ export default class Posts extends Component {
     return arr.map((item) => {
       const { name, altname, photo, src, alt, descr, id, likes } = item;
       return (
-        <div key={id} className="post" data-aos="fade-right"
-        data-aos-duration="4000">
+        <div
+          key={id}
+          className="post"
+          data-aos="fade-right"
+          data-aos-duration="500"
+        >
           <User src={photo} alt={altname} name={name} min />
           <img src={src} alt={alt}></img>
           <div className="icon_div">

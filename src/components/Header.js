@@ -7,7 +7,7 @@ export default class Header extends Component {
       <header>
         <div className="container h-flex">
           <div className="home_inst">
-            <NavLink to="/"  className="logo">
+            <NavLink to="/" className="logo">
               <img src={logo} alt="logo"></img>
             </NavLink>
             <img
@@ -18,17 +18,17 @@ export default class Header extends Component {
           <nav className="links">
             <ul>
               <li>
-                <NavLink to="/"  className="menu__links">
+                <NavLink to="/" className="menu__links">
                   lenta
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/profile"  className="menu__links">
+                <NavLink to="/profile" className="menu__links">
                   profile
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/MYPOSTS"  className="menu__links">
+                <NavLink to="/MYPOSTS" className="menu__links">
                   MY POSTS
                 </NavLink>
               </li>
