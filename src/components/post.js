@@ -86,6 +86,7 @@ const Post = () => {
         className={show ? "post_input " : "post_input ds_none"}
       >
         <input
+        
           placeholder="შეიყვანეთ სურათის აღწერა"
           type="text"
           onChange={(e) => setvalue(e.target.value)}
