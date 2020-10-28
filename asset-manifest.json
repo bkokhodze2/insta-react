@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/insta_react/static/css/main.79ca5f0f.chunk.css",
+    "main.js": "/insta_react/static/js/main.1cf4fbb4.chunk.js",
+    "main.js.map": "/insta_react/static/js/main.1cf4fbb4.chunk.js.map",
+    "runtime-main.js": "/insta_react/static/js/runtime-main.0d5ad426.js",
+    "runtime-main.js.map": "/insta_react/static/js/runtime-main.0d5ad426.js.map",
+    "static/css/2.4707e12a.chunk.css": "/insta_react/static/css/2.4707e12a.chunk.css",
+    "static/js/2.920274fa.chunk.js": "/insta_react/static/js/2.920274fa.chunk.js",
+    "static/js/2.920274fa.chunk.js.map": "/insta_react/static/js/2.920274fa.chunk.js.map",
+    "index.html": "/insta_react/index.html",
+    "precache-manifest.a6b58bf7c26ad0b6563f4681bfaad824.js": "/insta_react/precache-manifest.a6b58bf7c26ad0b6563f4681bfaad824.js",
+    "service-worker.js": "/insta_react/service-worker.js",
+    "static/css/2.4707e12a.chunk.css.map": "/insta_react/static/css/2.4707e12a.chunk.css.map",
+    "static/css/main.79ca5f0f.chunk.css.map": "/insta_react/static/css/main.79ca5f0f.chunk.css.map",
+    "static/js/2.920274fa.chunk.js.LICENSE.txt": "/insta_react/static/js/2.920274fa.chunk.js.LICENSE.txt",
+    "static/media/error.png": "/insta_react/static/media/error.3b8ad90a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0d5ad426.js",
+    "static/css/2.4707e12a.chunk.css",
+    "static/js/2.920274fa.chunk.js",
+    "static/css/main.79ca5f0f.chunk.css",
+    "static/js/main.1cf4fbb4.chunk.js"
+  ]
+}
