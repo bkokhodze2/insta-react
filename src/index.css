@@ -54,6 +54,7 @@ header {
 
 .links ul li {
   margin: 0 20px;
+  
 }
 .links ul li:hover {
   border-bottom: 2px solid black;
@@ -61,8 +62,9 @@ header {
 
 .menu__links {
   font-size: 18px;
-  color: #000000;
+  
   text-decoration: none;
+  
 }
 
 .feed {
@@ -394,5 +396,20 @@ header {
   100% {
     background-color: blue;
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 647px) {
+  .links ul li {
+    margin: 0 5px;
+  }
+  .menu__links{
+    font-size: 16px;
+  }
+  .insta_font {
+    margin-left: 5px;
+  }
+  .logo img {
+    margin-right: 5px;
   }
 }
