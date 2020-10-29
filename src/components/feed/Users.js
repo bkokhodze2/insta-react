@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import InstaService from "../services/instaService";
-import ErrorMassage from "./Error";
-import Loading from "./Loading";
-import Keanu from "./Keanu";
+import InstaService from "../../services/instaService";
+import ErrorMassage from "./postss/Error";
+import Loading from "./postss/Loading";
+import Keanu from "../myposts/postt/Keanu";
 
 export default class Users extends Component {
   InstaService = new InstaService();

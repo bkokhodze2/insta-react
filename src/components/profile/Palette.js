@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import InstaService from "../services/instaService";
-import ErrorMasage from "./Error";
+import InstaService from "../../services/instaService";
+import ErrorMasage from "../feed/postss/Error";
 import AOS from "aos";
 import "aos/dist/aos.css";
 

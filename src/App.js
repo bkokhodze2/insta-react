@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Header from "./components/Header";
-import Feed from "./components/Feed";
-import Profile from "./components/Profile";
-import Myposts from "./components/Myposts";
+import Header from "./components/header/Header";
+import Feed from "./components/feed/Feed";
+import Profile from "./components/profile/Profile";
+import Myposts from "./components/myposts/Myposts";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {

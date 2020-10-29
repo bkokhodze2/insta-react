@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Posts from "./Posts";
+import Posts from "./postss/Posts";
 import Users from "./Users";
 
 export default function Feed() {
