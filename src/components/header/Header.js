@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from "../../logo.png";
+import logo from "../../img/logo.png";
 import { NavLink } from "react-router-dom";
 export default class Header extends Component {
   render() {
@@ -19,7 +19,7 @@ export default class Header extends Component {
             <ul>
               <li>
                 <NavLink to="/" className="menu__links">
-                  lenta
+                  home
                 </NavLink>
               </li>
               <li>

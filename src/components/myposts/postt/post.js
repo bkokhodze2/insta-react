@@ -23,8 +23,7 @@ const Post = () => {
     },
     {
       id: Date.now() + 2,
-      src:
-        "https://eskipaper.com/images/high-resolution-photos-1.jpg",
+      src: "https://eskipaper.com/images/high-resolution-photos-1.jpg",
       likes: "126",
       descr: "yooo",
       date: "10/23/2020, 1:08:57 PM",
@@ -52,6 +51,7 @@ const Post = () => {
     setimg("");
     setvalue("");
   };
+
   const open = () => {
     // setnamee("mesame");
     setshow(false);
@@ -66,9 +66,11 @@ const Post = () => {
   useEffect(() => {
     AOS.init({});
   });
+
   const removePost = (id) => {
     setStatepost(statepost.filter((statepost) => statepost.id != id));
   };
+
   return (
     <>
       <div className="add_btns">
@@ -86,7 +88,6 @@ const Post = () => {
         className={show ? "post_input " : "post_input ds_none"}
       >
         <input
-        
           placeholder="შეიყვანეთ სურათის აღწერა"
           type="text"
           onChange={(e) => setvalue(e.target.value)}
@@ -104,7 +105,8 @@ const Post = () => {
       </div>
       <div className="mypost" data-aos="flip-left" data-aos-duration="1000">
         {statepost
-          .map((item) => (
+          .map((item) => ( 
+            
             <div
               key={item.id}
               data-aos="flip-left"
