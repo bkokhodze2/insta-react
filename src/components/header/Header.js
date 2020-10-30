@@ -29,7 +29,7 @@ export default class Header extends Component {
               </li>
               <li>
                 <NavLink to="/MYPOSTS" className="menu__links">
-                  MY POSTS
+                  my posts
                 </NavLink>
               </li>
             </ul>

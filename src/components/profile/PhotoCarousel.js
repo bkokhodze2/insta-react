@@ -13,6 +13,8 @@ export default class PhotoCarousel extends Component {
     var settings = {
       dots: true,
       infinite: true,
+      autoplay:true,
+      autoplaySpeed:1500,
       speed: 500,
       slidesToShow: 3,
       slidesToScroll: 3,

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import InstaService from "../../services/instaService";
+import InstaService from "../../img/services/instaService";
 import ErrorMassage from "./postss/Error";
 import Loading from "./postss/Loading";
 import Keanu from "../myposts/postt/Keanu";

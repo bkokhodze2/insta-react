@@ -6,7 +6,6 @@ const Myposts = () => {
   return (
     <div className="center">
       <Post />
-      
     </div>
   );
 };
