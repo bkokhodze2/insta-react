@@ -62,9 +62,6 @@ header {
         justify-content: center;
         justify-self: center;
         justify-items: center;
-        &:hover {
-          border-bottom: 2px solid black;
-        }
         .menu__links {
           font-size: 18px;
           display: flex;
@@ -455,7 +452,7 @@ header {
     object-fit: cover;
   }
 }
-.btn{
+.btn {
   width: 40%;
   cursor: pointer;
   margin: 0 auto;
@@ -494,9 +491,8 @@ header {
     justify-content: center;
     margin: 0 auto;
     margin-top: 2rem;
-    
   }
-  .sort{
+  .sort {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -565,7 +561,6 @@ header {
         box-shadow: 0px 0px 5px rgb(255, 6, 6);
       }
     }
-    
   }
   .ds_none {
     display: none;
@@ -640,6 +635,10 @@ header {
     }
   }
 }
+  .is-active{
+    color: red;
+    border-bottom: 2px solid black;
+  }
 @keyframes spinner {
   0% {
     transform: rotate(0deg);
@@ -662,6 +661,6 @@ header {
     transform: rotate(360deg);
   }
 }
-img {
-  display: block;
-}
+// img {
+//   display: block;
+// }

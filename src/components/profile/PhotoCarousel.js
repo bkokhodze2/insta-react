@@ -10,6 +10,7 @@ import img7 from "../../img/PhotoCarousel/7.jpg"
 
 export default class PhotoCarousel extends Component {
   render() {
+    
     var settings = {
       dots: true,
       infinite: true,
@@ -17,7 +18,7 @@ export default class PhotoCarousel extends Component {
       autoplaySpeed:1700,
       speed: 500,
       slidesToShow: 3,
-      slidesToScroll: 3,
+      slidesToScroll: 1,
       initialSlide: 0,
       adaptiveHeight:false,
       centerMode:true,

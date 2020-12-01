@@ -18,17 +18,17 @@ export default class Header extends Component {
           <nav className="links">
             <ul>
               <li>
-                <NavLink to="/" className="menu__links">
+                <NavLink to="/" exact activeClassName='is-active' className="menu__links">
                   home
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/profile" className="menu__links">
+                <NavLink to="/profile" activeClassName='is-active' className="menu__links">
                   profile
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/MYPOSTS" className="menu__links">
+                <NavLink to="/MYPOSTS" activeClassName='is-active' className="menu__links">
                   my posts
                 </NavLink>
               </li>

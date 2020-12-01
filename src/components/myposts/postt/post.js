@@ -36,7 +36,6 @@ const Post = () => {
       date: "10/23/2020, 1:08:04 PM",
     },
   ]);
-  console.log(statepost);
   var [value, setvalue] = useState("");
   var [img, setimg] = useState("");
 
@@ -232,5 +231,4 @@ const Post = () => {
     </>
   );
 };
-
 export default Post;
